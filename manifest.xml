@@ -1,26 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+  xsi:type="TaskPaneApp">
+
   <Id>f0d370cf-4b88-4ffb-b790-287f5c1d8438</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>EXAI</ProviderName>
-  <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="EXAI Gemini"/>
-  <Description DefaultValue="Tro ly AI cho Excel va Word dung Gemini."/>
+  <DefaultLocale>vi-VN</DefaultLocale>
+
+  <DisplayName DefaultValue="EXAI ChatGPT"/>
+  <Description DefaultValue="Tro ly AI cho Excel va Word dung OpenAI ChatGPT."/>
+
   <IconUrl DefaultValue="https://duongdinhdbp.github.io/EXAI/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://duongdinhdbp.github.io/EXAI/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <SupportUrl DefaultValue="https://duongdinhdbp.github.io/EXAI/"/>
+
   <AppDomains>
+    <AppDomain>https://localhost:3000</AppDomain>
     <AppDomain>https://duongdinhdbp.github.io</AppDomain>
+    <AppDomain>https://api.openai.com</AppDomain>
   </AppDomains>
+
   <Hosts>
     <Host Name="Workbook"/>
     <Host Name="Document"/>
   </Hosts>
+
   <DefaultSettings>
     <SourceLocation DefaultValue="https://duongdinhdbp.github.io/EXAI/taskpane.html"/>
   </DefaultSettings>
+
   <Permissions>ReadWriteDocument</Permissions>
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+
+  <VersionOverrides
+    xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+    xsi:type="VersionOverridesV1_0">
+
     <Hosts>
       <Host xsi:type="Workbook">
         <DesktopFormFactor>
@@ -29,7 +47,9 @@
             <Description resid="GetStarted.Description"/>
             <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
           </GetStarted>
+
           <FunctionFile resid="Commands.Url"/>
+
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <OfficeTab id="TabHome">
               <Group id="CommandsGroup">
@@ -39,6 +59,7 @@
                   <bt:Image size="32" resid="Icon.32x32"/>
                   <bt:Image size="80" resid="Icon.80x80"/>
                 </Icon>
+
                 <Control xsi:type="Button" id="TaskpaneButton">
                   <Label resid="TaskpaneButton.Label"/>
                   <Supertip>
@@ -60,6 +81,7 @@
           </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
+
       <Host xsi:type="Document">
         <DesktopFormFactor>
           <GetStarted>
@@ -67,7 +89,9 @@
             <Description resid="GetStarted.Description"/>
             <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
           </GetStarted>
+
           <FunctionFile resid="Commands.Url"/>
+
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <OfficeTab id="TabHome">
               <Group id="CommandsGroup">
@@ -77,6 +101,7 @@
                   <bt:Image size="32" resid="Icon.32x32"/>
                   <bt:Image size="80" resid="Icon.80x80"/>
                 </Icon>
+
                 <Control xsi:type="Button" id="TaskpaneButtonWord">
                   <Label resid="TaskpaneButton.Label"/>
                   <Supertip>
@@ -99,25 +124,29 @@
         </DesktopFormFactor>
       </Host>
     </Hosts>
+
     <Resources>
       <bt:Images>
         <bt:Image id="Icon.16x16" DefaultValue="https://duongdinhdbp.github.io/EXAI/assets/icon-16.png"/>
         <bt:Image id="Icon.32x32" DefaultValue="https://duongdinhdbp.github.io/EXAI/assets/icon-32.png"/>
         <bt:Image id="Icon.80x80" DefaultValue="https://duongdinhdbp.github.io/EXAI/assets/icon-80.png"/>
       </bt:Images>
+
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
         <bt:Url id="Commands.Url" DefaultValue="https://duongdinhdbp.github.io/EXAI/commands.html"/>
         <bt:Url id="Taskpane.Url" DefaultValue="https://duongdinhdbp.github.io/EXAI/taskpane.html"/>
       </bt:Urls>
+
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="EXAI da san sang!"/>
         <bt:String id="CommandsGroup.Label" DefaultValue="EXAI"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="EXAI Gemini"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="EXAI ChatGPT"/>
       </bt:ShortStrings>
+
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="EXAI da nap. Vao tab HOME nhan nut EXAI Gemini."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Mo EXAI Gemini"/>
+        <bt:String id="GetStarted.Description" DefaultValue="EXAI da nap. Vao tab HOME nhan nut EXAI ChatGPT."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Mo EXAI ChatGPT"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
