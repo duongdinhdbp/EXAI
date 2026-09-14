@@ -7,11 +7,11 @@
   xsi:type="TaskPaneApp">
 
   <Id>f0d370cf-4b88-4ffb-b790-287f5c1d8438</Id>
-  <Version>1.0.0.0</Version>
+  <Version>1.0.0914.1020</Version>
   <ProviderName>EXAI</ProviderName>
   <DefaultLocale>vi-VN</DefaultLocale>
 
-  <DisplayName DefaultValue="EXAI ChatGPT"/>
+  <DisplayName DefaultValue="EXAI Free AI"/>
   <Description DefaultValue="Tro ly AI cho Excel va Word dung OpenAI ChatGPT."/>
 
   <IconUrl DefaultValue="https://duongdinhdbp.github.io/EXAI/assets/icon-32.png"/>
@@ -141,12 +141,12 @@
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="EXAI da san sang!"/>
         <bt:String id="CommandsGroup.Label" DefaultValue="EXAI"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="EXAI ChatGPT"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="EXAI Free AI"/>
       </bt:ShortStrings>
 
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="EXAI da nap. Vao tab HOME nhan nut EXAI ChatGPT."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Mo EXAI ChatGPT"/>
+        <bt:String id="GetStarted.Description" DefaultValue="EXAI da nap. Vao tab HOME nhan nut EXAI Free AI."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Mo EXAI Free AI"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
